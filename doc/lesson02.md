@@ -89,7 +89,7 @@ Optional
 
 Примечания:
 
-    - В UserMealRestController в save/update данные UserMeal приходят без User/userId.
+    - Пока НЕ надо добавлять поле User в UserMeal (добавим позже, реализуем через параметр userId).
     - В UserMealServiceImpl постараться сделать в каждом методе только одни запрос к UserMealRepository 
     - LoggedUser известен только на слое web (UserMealService можно тестировать без подмены логики авторизации)
     - Не надо в названиях методов повторять названия класса, например Meal.
