@@ -85,7 +85,7 @@ Optional
     - Добавить в mealList.jsp и MealServlet фильтрацию еды по дате и времени (см. демо)
     
     - Добавить выбор текущего залогиненного пользователя (имитация авторизации)
-      (например захардкодить 1 и 2 в index.html select и сделать LoggedUser.setId(userId) в UserServlet).
+      (например захардкодить 1,2 в index.html select и сделать LoggedUser.setId(userId) в UserServlet).
 
 Примечания:
 
