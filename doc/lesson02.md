@@ -79,6 +79,7 @@ Optional
     
     - Добавить выбор текущего залогиненного пользователя (имитация авторизации)
       (например захардкодить 1 и 2 в index.html select и сделать LoggedUser.setId(userId) в UserServlet).
+      
     - Реализовать InMemoryUserRepositoryImpl
 
 Примечания:
