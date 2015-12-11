@@ -72,10 +72,10 @@
     
 Optional 
 
-  - Сделать инициализацию Spring и вызов UserMealRestController из MealServlet 
+   - Сделать инициализацию Spring и вызов UserMealRestController из MealServlet 
      (НЕ менять в pom.xml, работаем со spring-context, в дальнейшем мы будем работать с контроллерами, без сервлетов).
-  - Добавить в mealList.jsp и MealServlet фильтрацию еды по дате и времени (см. демо)
-  - 
+   - Добавить в mealList.jsp и MealServlet фильтрацию еды по дате и времени (см. демо)
+   - 
 
 Примечания:
 
