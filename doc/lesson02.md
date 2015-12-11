@@ -62,7 +62,7 @@
 
     - Реализовать InMemoryUserRepositoryImpl (список пользователей возвращать отсортированным по имени)
   
-    - Зарефакторить InMemoryUserMealRepositoryImpl: 
+    - Зарефакторить UserMealRepository/InMemoryUserMealRepositoryImpl: 
       - еда принадлежит пользователю (добавляется параметр userId),
       - список еды возвращать отсортированным по времени
       - если еда отсутствует или чужая, возвращать null/false (см. UserRepository)
