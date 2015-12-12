@@ -60,7 +60,8 @@
   
 ## Домашнее задание HW02
 
-    - Реализовать InMemoryUserRepositoryImpl (список пользователей возвращать отсортированным по имени)
+    - Переименовать MockUserRepositoryImpl в InMemoryUserRepositoryImpl и имплементировать по аналогии с
+    InMemoryUserMealRepositoryImpl (список пользователей возвращать отсортированным по имени)
   
     - Зарефакторить UserMealRepository/InMemoryUserMealRepositoryImpl: 
       - еда принадлежит пользователю (добавляется параметр userId),
