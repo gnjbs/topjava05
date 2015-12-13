@@ -63,12 +63,12 @@
     - Переименовать MockUserRepositoryImpl в InMemoryUserRepositoryImpl и имплементировать по аналогии с
     InMemoryUserMealRepositoryImpl (список пользователей возвращать отсортированным по имени)
   
-    - Зарефакторить UserMealRepository/InMemoryUserMealRepositoryImpl: 
-      - еда принадлежит пользователю (добавляется параметр userId),
-      - список еды возвращать отсортированным по времени
-      - если еда отсутствует или чужая, возвращать null/false (см. UserRepository)
-
     - Сделать реализацию слоев приложения для функциональности "еда":
+      - Зарефакторить UserMealRepository/InMemoryUserMealRepositoryImpl: 
+        - еда принадлежит пользователю (добавляется параметр userId),
+        - список еды возвращать отсортированным по времени
+        - если еда отсутствует или чужая, возвращать null/false (см. UserRepository)
+
       - API должна удовлетворять все потребности демо приложения и ничего лишнего (см. http://topjava.herokuapp.com).
       - после авторизации пользователь попадает в контроллер 
                               (его id находится в LoggedUser.id(), см. ProfileRestController).
