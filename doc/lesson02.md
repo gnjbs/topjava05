@@ -48,7 +48,7 @@
 -  Ресурсы:
    -  <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html">Introduction to the Spring IoC container
        and beans</a>
-   -  <a href="http://springindepth.com/book/in-depth-ioc-constructor-setter-injection.html">Constructor & Setter Injection</a>
+   -  <a href="http://it.vaclav.kiev.ua/2010/12/25/spring-framework-for-begginers-part-7/">Constructor против Setter Injection </a>
    -  <a href="http://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in">Difference
        between @Component, @Repository & @Service annotations in Spring</a>
    -  <a href="http://www.mkyong.com/spring/spring-auto-scanning-components/">Spring Auto Scanning Components</a>
