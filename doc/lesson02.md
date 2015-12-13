@@ -118,7 +118,9 @@ G
     UserMealRestController должен уметь обрабатывать запросы:
     - Отдать свою еду (для отображения в таблице, формат List<UserMealWithExceed>), запрос БЕЗ параметров
     - Отдать свою еду, отфильтрованную по startDate, startTime, endDate, endTime
-    - Отдать/удалить свою еду по id, параметр запроса - id еды. Если еда с этим id чужая или отсутствует - NotFoundException
+    - Отдать/удалить свою еду по id, параметр запроса - id еды. 
+                        Если еда с этим id чужая или отсутствует - NotFoundException
     - Сохранить/обновить еду, параметр запроса - UserMeal, сконструированный из id еды, dateTime, description, calories.
+                        Если обновляемая еда с этим id чужая или отсутствует - NotFoundException
   
 
