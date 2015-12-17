@@ -10,10 +10,7 @@ import ru.javawebinar.topjava.util.UserUtil;
 import ru.javawebinar.topjava.util.exception.ExceptionUtil;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -53,7 +50,7 @@ public class InMemoryUserRepositoryImpl implements UserRepository {
     @Override
     public List<User> getAll() {
         LOG.info("getAll");
-        List<User> userList = (List<User>) repository.values();
+        List<User> userList = new ArrayList<User>(repository.values());
         Collections.sort(userList, new Comparator<User>() {
             @Override
             public int compare(User o1, User o2) {
