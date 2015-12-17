@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 public class UserMeal {
     protected Integer id;
 
+    protected Integer userId;
+
     protected final LocalDateTime dateTime;
 
     protected final String description;
