@@ -6,6 +6,9 @@ import ru.javawebinar.topjava.LoggerWrapper;
 import ru.javawebinar.topjava.model.UserMeal;
 import ru.javawebinar.topjava.service.UserMealServiceImpl;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,6 +27,10 @@ public class UserMealRestController {
     public List<UserMeal> getAll() {
         LOG.info("getAll");
         return service.getAll();
+    }
+
+    public List<UserMeal> getAllByDate(LocalDate startDate, LocalDate endDate, LocalDateTime startTime, LocalDateTime endTime){
+        return new ArrayList<>();
     }
 
     public UserMeal get(int id) {
