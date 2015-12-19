@@ -1,6 +1,7 @@
 package ru.javawebinar.topjava.web.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import ru.javawebinar.topjava.LoggerWrapper;
 import ru.javawebinar.topjava.model.User;
 import ru.javawebinar.topjava.service.UserService;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * User: gkislin
  */
+@Controller
 public abstract class AbstractUserController {
     protected final LoggerWrapper LOG = LoggerWrapper.get(getClass());
 

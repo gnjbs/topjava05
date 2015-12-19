@@ -7,14 +7,17 @@ import ru.javawebinar.topjava.repository.UserRepository;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * GKislin
  * 15.06.2015.
  */
 @Repository
-public class MockUserRepositoryImpl implements UserRepository {
-    private static final LoggerWrapper LOG = LoggerWrapper.get(MockUserRepositoryImpl.class);
+public class InMemoryUserRepositoryImpl implements UserRepository {
+    private static final LoggerWrapper LOG = LoggerWrapper.get(InMemoryUserRepositoryImpl.class);
+    private Map<Integer,User> repository = new ConcurrentHashMap<>();
 
     @Override
     public boolean delete(int id) {
