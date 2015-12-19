@@ -1,12 +1,12 @@
 package ru.javawebinar.topjava.repository.mock;
 
 import org.springframework.stereotype.Repository;
+import ru.javawebinar.topjava.model.User;
 import ru.javawebinar.topjava.model.UserMeal;
 import ru.javawebinar.topjava.repository.UserMealRepository;
 import ru.javawebinar.topjava.util.UserMealsUtil;
 
-import java.util.Collection;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -43,8 +43,14 @@ public class InMemoryUserMealRepositoryImpl implements UserMealRepository {
 
     @Override
     public Collection<UserMeal> getAll() {
-
-        return repository.values();
+        List<UserMeal> userMealList = new ArrayList<UserMeal>(repository.values());
+        Collections.sort(userMealList, new Comparator<UserMeal>() {
+            @Override
+            public int compare(UserMeal o1, UserMeal o2) {
+                return o1.getDateTime().compareTo(o2.getDateTime());
+            }
+        });
+        return userMealList;
     }
 }
 
