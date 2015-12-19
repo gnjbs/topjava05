@@ -41,6 +41,7 @@ public class InMemoryUserMealRepositoryImpl implements UserMealRepository {
 
     @Override
     public Collection<UserMeal> getAll() {
+
         return repository.values();
     }
 }
