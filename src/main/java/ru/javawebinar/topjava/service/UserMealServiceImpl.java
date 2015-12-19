@@ -22,6 +22,12 @@ public class UserMealServiceImpl implements UserMealService {
     private UserMealRepository repository;
 
     @Override
+    public UserMeal getUserId(UserMeal userMeal) {
+        //maybe boolean?
+        return null;
+    }
+
+    @Override
     public UserMeal save(UserMeal userMeal) {
         return repository.save(userMeal);
     }

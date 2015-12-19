@@ -12,6 +12,9 @@ import java.util.List;
 
 
 public interface UserMealService {
+
+    UserMeal getUserId(UserMeal userMeal);
+
     UserMeal save(UserMeal userMeal);
 
     void delete(int id) throws NotFoundException;
