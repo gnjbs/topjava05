@@ -8,10 +8,11 @@
 
     <%
         LoggedUser loggedUser = new LoggedUser();
-        loggedUser.id();
+        loggedUser.id = 1;
+
     %>
     <form action="mealList.jsp">
-        <input type="checkbox" name="loggedUserStatus" value="${loggedUser}"> LoggedUser<BR>
+        <input type="checkbox" name="loggedUserStatus" value="${loggedUser.id}"> LoggedUser<BR>
 
         <input type="submit" value="LOGIN" ${loggedUser.id}= 1>
     </form>
