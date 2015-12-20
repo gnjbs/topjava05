@@ -1,5 +1,6 @@
 package ru.javawebinar.topjava.web;
 
+import org.springframework.stereotype.Repository;
 import ru.javawebinar.topjava.LoggerWrapper;
 import ru.javawebinar.topjava.model.UserMeal;
 import ru.javawebinar.topjava.repository.mock.InMemoryUserMealRepositoryImpl;
