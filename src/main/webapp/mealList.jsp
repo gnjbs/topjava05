@@ -1,13 +1,44 @@
 <%@ page import="ru.javawebinar.topjava.util.TimeUtil" %>
+<%@ page import="ru.javawebinar.topjava.LoggedUser" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
+
+    <%
+        LoggedUser loggedUser = new LoggedUser();
+        loggedUser.id();
+    %>
+    <form action="mealList.jsp">
+        <input type="checkbox" name="loggedUserStatus" value="${loggedUser}"> LoggedUser<BR>
+
+        <input type="submit" value="LOGIN" ${loggedUser.id}= 1>
+    </form>
+    <form>
+        <table>
+            <tr>
+                <td>From Date: <input type="date" value="${meal.dateTime}" name="startDate"></td>
+                <td>From Time: <input type="time" value="${meal.dateTime}" name="starTime"></td>
+            </tr>
+            <tr>
+                <td>To Date: <input type="date" value="${meal.dateTime}" name="endTime"></td>
+                <td>To Time: <input type="time" value="${meal.dateTime}" name="endTime"></td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Filter">
+    </form>
+
     <title>Meal list</title>
     <style>
-        .normal {color: green;}
-        .exceeded {color: red;}
+        .normal {
+            color: green;
+        }
+
+        .exceeded {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -30,8 +61,8 @@
             <jsp:useBean id="meal" scope="page" type="ru.javawebinar.topjava.model.UserMealWithExceed"/>
             <tr class="${meal.exceed ? 'exceeded' : 'normal'}">
                 <td>
-                   <%--<fmt:parseDate value="${meal.dateTime}" pattern="y-M-dd'T'H:m" var="parsedDate"/>--%>
-                   <%--<fmt:formatDate value="${parsedDate}" pattern="yyyy.MM.dd HH:mm" />--%>
+                        <%--<fmt:parseDate value="${meal.dateTime}" pattern="y-M-dd'T'H:m" var="parsedDate"/>--%>
+                        <%--<fmt:formatDate value="${parsedDate}" pattern="yyyy.MM.dd HH:mm" />--%>
                     <%=TimeUtil.toString(meal.getDateTime())%>
                 </td>
                 <td>${meal.description}</td>

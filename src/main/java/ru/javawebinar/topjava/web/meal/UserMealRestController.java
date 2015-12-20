@@ -30,6 +30,7 @@ public class UserMealRestController {
     }
 
     public List<UserMeal> getAllByDate(LocalDate startDate, LocalDate endDate, LocalDateTime startTime, LocalDateTime endTime){
+        LOG.info("getAllByDate");
         return new ArrayList<>();
     }
 
